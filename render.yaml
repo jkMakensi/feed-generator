@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: feed-en-espanol
+    runtime: docker
+    plan: free
+    healthCheckPath: /.well-known/did.json
+    envVars:
+      - key: FEEDGEN_LISTENHOST
+        value: 0.0.0.0
